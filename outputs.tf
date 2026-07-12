@@ -1,3 +1,7 @@
+output "kubernetes_cluster_deployment_safeguards_id" {
+  description = "Map of id values across all kubernetes_cluster_deployment_safeguards, keyed the same as var.kubernetes_cluster_deployment_safeguards"
+  value       = { for k, v in azurerm_kubernetes_cluster_deployment_safeguard.kubernetes_cluster_deployment_safeguards : k => v.id }
+}
 output "kubernetes_cluster_deployment_safeguards_excluded_namespaces" {
   description = "Map of excluded_namespaces values across all kubernetes_cluster_deployment_safeguards, keyed the same as var.kubernetes_cluster_deployment_safeguards"
   value       = { for k, v in azurerm_kubernetes_cluster_deployment_safeguard.kubernetes_cluster_deployment_safeguards : k => v.excluded_namespaces }
