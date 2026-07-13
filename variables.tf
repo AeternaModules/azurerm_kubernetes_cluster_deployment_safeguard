@@ -13,7 +13,7 @@ EOT
     kubernetes_cluster_id        = string
     level                        = string
     excluded_namespaces          = optional(list(string))
-    pod_security_standards_level = optional(string) # Default: "Privileged"
+    pod_security_standards_level = optional(string)
   }))
 }
 
